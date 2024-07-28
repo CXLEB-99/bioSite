@@ -1,0 +1,305 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+header {
+  background-color: #4CAF50;
+  color: #fff;
+  text-align: center;
+  padding: 1em 0;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul li {
+  margin: 0 10px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-family: 'Helvetica', sans-serif; /* Font for navigation */
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+main {
+  padding: 2%;
+}
+
+#hero {
+  position: relative;
+  width: 100%;
+  height: 450px; /* Adjust this value for desired height */
+  overflow: hidden;
+}
+
+#hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.column {
+  flex: 1;
+  padding: 1%;
+  box-sizing: border-box;
+}
+
+#about {
+  background-color: #fff;
+  color: #333;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+/* Alternating row background colors */
+.row:nth-of-type(even) {
+  background-color: #e0f7fa;
+}
+
+.row:nth-of-type(odd) {
+  background-color: #b2ebf2;
+}
+
+.images-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 1%;
+  background-color: #e0e0e0;
+}
+
+.bio-img {
+  width: 48%;
+  height: auto;
+  display: block;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 620px) {
+  .row {
+      flex-direction: column;
+  }
+
+  .column {
+      width: 100%;
+      padding: 0;
+  }
+
+  .images-container {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .bio-img {
+      width: 100%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+      padding: 10px;
+      max-width: 100%;
+      height: auto;
+  }
+}
+
+/* About Page Styles */
+#about-page {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+#about-page .column {
+  flex: 1;
+  padding: 1%;
+  box-sizing: border-box;
+}
+
+#about-page .bio-content {
+  flex: 1 1 55%;
+}
+
+#about-page .bio-image {
+  flex: 1 1 40%;
+}
+
+#about-page .bio-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px; /* Added for better presentation */
+}
+
+@media screen and (max-width: 768px) {
+  #about-page {
+      flex-direction: column;
+  }
+
+  #about-page .column {
+      width: 100%;
+      padding: 0;
+  }
+
+  #about-page .bio-image {
+      margin-top: 20px;
+  }
+}
+
+/* Hobby Page Styles */
+#hobbies {
+  background-color: #fff;
+  color: #333;
+  padding: 20px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+#gallery {
+  background-color: #fff;
+  color: #333;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.gallery-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border: 2px solid #ddd;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+
+figure {
+  margin: 0;
+  padding: 10px;
+}
+
+figcaption {
+  text-align: center;
+  margin-top: 5px;
+  font-size: 0.9em;
+  color: #555;
+}
+
+/* Responsive Styles for Hobby Page */
+@media screen and (max-width: 768px) {
+  .column {
+      flex: 0 0 50%;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .row {
+      flex-direction: column;
+  }
+
+  .column {
+      width: 100%;
+      padding: 0;
+  }
+}
+
+footer {
+  text-align: center;
+  font-size: 0.85em;
+  background-color: #333;
+  color: #fff;
+  padding: 1% 0;
+}
+
+footer a {
+  color: #f3e6d8;
+  text-decoration: none;
+}
+
+/* Additional Elements or Pseudo-classes not covered in textbook */
+/* Example: CSS pseudo-class :first-of-type */
+p:first-of-type {
+  font-weight: bold;
+}
+
+/* Example: CSS element selector for figure and figcaption */
+figure {
+  margin: 10px;
+}
+
+figcaption {
+  text-align: center;
+  font-style: italic;
+  font-size: 0.9em;
+}
+
+/* Media Queries */
+@media (min-width: 1200px) {
+  body {
+      background: linear-gradient(to right, #ff7e5f, #feb47b); /* Gradient background for large desktops */
+  }
+}
+
+@media (max-width: 1199px) and (min-width: 992px) {
+  /* Desktop specific styles */
+}
+
+@media (max-width: 991px) and (min-width: 768px) {
+  /* Tablet specific styles */
+  .column {
+      width: 100%;
+      display: block;
+  }
+
+  .row {
+      display: block;
+  }
+}
+
+@media (max-width: 767px) {
+  /* Mobile specific styles */
+  .column {
+      width: 100%;
+      display: block;
+  }
+
+  .row {
+      display: block;
+  }
+
+  /* Use list instead of table for mobile viewport */
+  .row {
+      list-style: disc;
+      padding-left: 20px;
+  }
+}
+
+@media print {
+  body {
+      background-color: white;
+  }
+
+  header, footer {
+      display: none;
+  }
+
+  .hero-img, .bio-img {
+      width: 100%;
+  }
+}
